@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="700.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.bookworm.bookwormlibrarymanagementsystem.controller.LoginController">
+    <children>
+        <ImageView fitHeight="700.0" fitWidth="1500.0">
+            <image>
+                <Image url="@../assets/background.jpg" />
+            </image>
+            <effect>
+                <BoxBlur iterations="3" />
+            </effect>
+        </ImageView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" height="700.0" opacity="0.61" strokeType="INSIDE" width="1500.0" />
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffffcd" height="600.0" layoutX="575.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
+        <TextField fx:id="txtUserNameLogin" layoutX="627.0" layoutY="372.0" prefHeight="30.0" prefWidth="300.0" />
+        <TextField fx:id="txtPasswordLogin" layoutX="627.0" layoutY="429.0" prefHeight="30.0" prefWidth="300.0" />
+        <JFXButton fx:id="btnLogin" layoutX="630.0" layoutY="504.0" onAction="#btnLoginOnAction" prefHeight="30.0" prefWidth="300.0" text="Login">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </JFXButton>
+        <Label layoutX="673.0" layoutY="582.0" text="Haven't an account?">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Hyperlink layoutX="818.0" layoutY="578.0" onAction="#hypSignUp" text="Sign Up">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Hyperlink>
+        <Label layoutX="629.0" layoutY="353.0" text="User Name" />
+        <Label layoutX="629.0" layoutY="413.0" text="Password" />
+        <Circle fill="WHITE" layoutX="772.0" layoutY="182.0" radius="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="4.0" />
+        <ImageView fitHeight="64.0" fitWidth="67.0" layoutX="739.0" layoutY="146.0">
+            <image>
+                <Image url="@../assets/logo.png" />
+            </image>
+        </ImageView>
+      <Hyperlink layoutX="627.0" layoutY="458.0" onAction="#hypForgetPassword" text="forget password?">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Hyperlink>
+    </children>
+</AnchorPane>

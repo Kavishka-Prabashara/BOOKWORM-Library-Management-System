@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.bookworm.bookwormlibrarymanagementsystem.controller.LoginController">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="300.0">
+         <children>
+            <JFXButton layoutX="13.0" layoutY="112.0" prefHeight="50.0" prefWidth="270.0" text="Book Management" />
+            <JFXButton layoutX="13.0" layoutY="172.0" prefHeight="50.0" prefWidth="270.0" text="User Manaement" />
+            <JFXButton layoutX="13.0" layoutY="232.0" prefHeight="50.0" prefWidth="270.0" text="Branch Management" />
+            <JFXButton layoutX="13.0" layoutY="292.0" prefHeight="50.0" prefWidth="270.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
