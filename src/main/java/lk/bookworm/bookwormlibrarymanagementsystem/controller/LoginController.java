@@ -49,4 +49,20 @@ public class LoginController {
 
     }
 
+    public void btnBookManagementOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnUserManagement(ActionEvent actionEvent) {
+    }
+
+    public void btnBranchManagementOnAction(ActionEvent actionEvent) {
+    }
+
+    public void btnSettingsOnAction(ActionEvent actionEvent) {
+
+    }
+
+    public void hypLogoutOnAction(ActionEvent actionEvent) {
+
+    }
 }
