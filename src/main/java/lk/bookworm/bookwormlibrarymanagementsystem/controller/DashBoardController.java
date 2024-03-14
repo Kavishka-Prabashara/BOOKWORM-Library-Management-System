@@ -55,28 +55,28 @@ public class DashBoardController implements Initializable {
 
 
     public void btnBookManagementOnAction(ActionEvent actionEvent) throws IOException {
-        Parent load= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/bookManagementForm.fxml")));
+        Parent load= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/bookManagement-page.fxml")));
         pane.getChildren().clear();
         pane.getChildren().add(load);
 
     }
 
     public void btnUserManagement(ActionEvent actionEvent) throws IOException {
-        Parent load= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/userManagementForm.fxml")));
+        Parent load= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/userManagement-page.fxml")));
         pane.getChildren().clear();
         pane.getChildren().add(load);
 
     }
 
     public void btnBranchManagementOnAction(ActionEvent actionEvent) throws IOException {
-        Parent load= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/branchManagementForm.fxml")));
+        Parent load= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/branchManagement-page.fxml")));
         pane.getChildren().clear();
         pane.getChildren().add(load);
 
     }
 
     public void btnSettingsOnAction(ActionEvent actionEvent) throws IOException {
-        Parent load= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/settingsForm.fxml")));
+        Parent load= FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/settings-page.fxml")));
         pane.getChildren().clear();
         pane.getChildren().add(load);
 
