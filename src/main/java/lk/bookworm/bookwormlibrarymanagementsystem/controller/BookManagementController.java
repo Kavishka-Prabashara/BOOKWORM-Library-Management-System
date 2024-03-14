@@ -32,6 +32,9 @@ public class BookManagementController {
     private TableColumn<?, ?> colBookEdition;
 
     @FXML
+    private TableColumn<?, ?> colBookGenreType;
+
+    @FXML
     private TableColumn<?, ?> colBookID;
 
     @FXML
@@ -51,6 +54,9 @@ public class BookManagementController {
 
     @FXML
     private TextField txtBookAuthor;
+
+    @FXML
+    private TextField txtBookAuthor1;
 
     @FXML
     private TextField txtBookEdition;
