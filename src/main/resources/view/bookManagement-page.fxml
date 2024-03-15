@@ -34,6 +34,6 @@
         </columns>
       </TableView>
       <TextField fx:id="txtBookPrice" layoutX="738.0" layoutY="64.0" prefHeight="30.0" prefWidth="200.0" promptText="Book Price" />
-      <TextField fx:id="txtBookAuthor1" layoutX="980.0" layoutY="17.0" prefHeight="30.0" prefWidth="200.0" promptText="Book Genre Type" />
+      <TextField fx:id="txtBookGenreType" layoutX="980.0" layoutY="17.0" prefHeight="30.0" prefWidth="200.0" promptText="Book Genre Type" />
    </children>
 </AnchorPane>
