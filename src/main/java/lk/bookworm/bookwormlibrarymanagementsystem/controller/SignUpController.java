@@ -5,6 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 
@@ -26,10 +27,15 @@ public class SignUpController {
     private TextField txtEmail;
 
     @FXML
-    private TextField txtPassword;
+    private PasswordField txtPassword;
+
+    @FXML
+    private TextField txtConfirmPassword;
 
     @FXML
     private TextField txtUserName;
+
+
 
     @FXML
     void btnBackOnAction(ActionEvent event) throws IOException {
