@@ -1,5 +1,6 @@
 package lk.bookworm.bookwormlibrarymanagementsystem.controller;
 
+import lk.bookworm.bookwormlibrarymanagementsystem.controller.EmailServiceController;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -15,6 +16,7 @@ import java.util.Objects;
 
 import lk.bookworm.bookwormlibrarymanagementsystem.bo.AdminBo;
 import lk.bookworm.bookwormlibrarymanagementsystem.dto.AdminDTO;
+
 
 public class SignUpController {
 
@@ -40,6 +42,8 @@ public class SignUpController {
     private TextField txtUserName;
 
     private AdminBo adminBo;
+
+    private EmailServiceController emailServiceController;
 
 
     public SignUpController(){
@@ -71,11 +75,20 @@ public class SignUpController {
 
         AdminDTO adminDTO = new AdminDTO(email,userName,password);
         boolean success =adminBo.createAdmin(adminDTO);
+        if (success) {
+            new Alert(Alert.AlertType.INFORMATION, "Admin registered successfully!").show();
+            Parent load=FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/login-page.fxml")));
+            root.getChildren().clear();
+            root.getChildren().add(load);
+            String subject = "Welcome to BookWorm Library!";
+            String body = "\t\t\tCongratulation! "+email +"Your account has been successfully created!"+"\n\nYour User Name is :" +email+"\n"+"Your Password is :"+password;
+            EmailServiceController.sendEmail(email, subject, body);
+
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Error occurred while registering admin!").show();
+        }
 
 
-        Parent load=FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/login-page.fxml")));
-        root.getChildren().clear();
-        root.getChildren().add(load);
 
     }
 
