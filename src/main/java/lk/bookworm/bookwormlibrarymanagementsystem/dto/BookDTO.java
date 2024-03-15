@@ -19,8 +19,8 @@ public class BookDTO {
     private String bookAuthor;
     private String publisher;
     private String bookEdition;
-    private String bookQTY;
+    private int bookQTY;
     private String bookGenreType;
-    private String bookPrice;
+    private double bookPrice;
 
 }

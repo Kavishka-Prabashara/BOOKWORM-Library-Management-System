@@ -3,14 +3,12 @@ package lk.bookworm.bookwormlibrarymanagementsystem.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import javafx.fxml.FXML;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Getter
@@ -22,7 +20,7 @@ import java.util.Date;
 public class BookEntity {
 
     @Column(name = "dateOfBookEntry" ,unique = false, nullable = true)
-    private Date dateOfBookEntry;
+    private LocalDate dateOfBookEntry;
 
     @Id
     @Column(name = "bookID")
@@ -62,4 +60,6 @@ public class BookEntity {
                 ",bookPrice='" + bookPrice + '\'' +
                 '}';
     }
+
+
 }

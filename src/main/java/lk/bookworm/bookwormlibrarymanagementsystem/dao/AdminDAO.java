@@ -28,8 +28,9 @@ public class AdminDAO {
             }
             e.printStackTrace();
             return false;
-        } finally {
+/*        } finally {
             session.close();
+        }*/
         }
     }
 }
