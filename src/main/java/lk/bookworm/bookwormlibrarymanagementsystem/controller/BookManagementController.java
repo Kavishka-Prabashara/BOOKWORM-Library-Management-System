@@ -106,9 +106,9 @@ public class BookManagementController {
         String bookAuthor =txtBookAuthor.getText();
         String publisher=txtPublisher.getText();
         String bookEdition=txtBookEdition.getText();
-        String bookQTY = txtBookQTY.getText();
+        int bookQTY = Integer.parseInt(txtBookQTY.getText());
         String bookGenreType=txtBookGenreType.getText();
-        String bookPrice =txtBookPrice.getText();
+        double bookPrice = Double.parseDouble(txtBookPrice.getText());
 
 
 
