@@ -1,7 +1,20 @@
 package lk.bookworm.bookwormlibrarymanagementsystem.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+
 public class AdminDTO {
 
-    public AdminDTO(String email, String userName, String password) {
-    }
+    private String email;
+    private String username;
+    private String password;
+
 }
+

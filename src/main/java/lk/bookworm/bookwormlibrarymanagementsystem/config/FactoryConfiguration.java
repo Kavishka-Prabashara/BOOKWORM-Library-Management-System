@@ -1,13 +1,12 @@
 package lk.bookworm.bookwormlibrarymanagementsystem.config;
 
-import org.hibernate.SessionBuilder;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-public class FactoryConfiguration {
+public class FactoryConfiguration{
 
     private static SessionFactory sessionFactory;
 
@@ -15,7 +14,7 @@ public class FactoryConfiguration {
         try {
             // Create the StandardServiceRegistry
             StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
-                    .configure("config/hibernate.cfg.xml") // path to your hibernate.cfg.xml file
+                    .configure("hibernate.cfg.xml") // path to your hibernate.cfg.xml file
                     .build();
 
             // Create MetadataSources
@@ -36,9 +35,5 @@ public class FactoryConfiguration {
         return sessionFactory;
     }
 
-    public static void shutdown() {
-        if (sessionFactory != null) {
-            sessionFactory.close();
-        }
-    }
+
 }

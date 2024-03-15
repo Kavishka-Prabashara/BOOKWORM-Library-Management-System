@@ -39,7 +39,12 @@ public class SignUpController {
     @FXML
     private TextField txtUserName;
 
+    private AdminBo adminBo;
 
+
+    public SignUpController(){
+        adminBo=new AdminBo();
+    }
 
     @FXML
     void btnBackOnAction(ActionEvent event) throws IOException {
@@ -65,6 +70,9 @@ public class SignUpController {
         }
 
         AdminDTO adminDTO = new AdminDTO(email,userName,password);
+        boolean success =adminBo.createAdmin(adminDTO);
+
+
         Parent load=FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/login-page.fxml")));
         root.getChildren().clear();
         root.getChildren().add(load);
