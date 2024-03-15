@@ -3,10 +3,16 @@ package lk.bookworm.bookwormlibrarymanagementsystem.controller;
 import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.control.*;
+import lk.bookworm.bookwormlibrarymanagementsystem.dto.BookDTO;
+import lk.bookworm.bookwormlibrarymanagementsystem.bo.BookBO;
+
+import java.io.IOException;
+import java.time.LocalDate;
+import java.util.Date;
+import java.util.Objects;
 
 public class BookManagementController {
 
@@ -56,7 +62,7 @@ public class BookManagementController {
     private TextField txtBookAuthor;
 
     @FXML
-    private TextField txtBookAuthor1;
+    private TextField txtBookGenreType;
 
     @FXML
     private TextField txtBookEdition;
@@ -79,6 +85,8 @@ public class BookManagementController {
     @FXML
     private TextField txtPublisher;
 
+    private BookBO bookBO;
+
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
 
@@ -90,7 +98,28 @@ public class BookManagementController {
     }
 
     @FXML
-    void btnSaveOnAction(ActionEvent event) {
+    void btnSaveOnAction(ActionEvent event) throws IOException {
+
+        LocalDate dateOfBookEntity= txtDateOfBookEntry.getValue();
+        String bookID= txtBookID.getText();
+        String bookName = txtBookName.getText();
+        String bookAuthor =txtBookAuthor.getText();
+        String publisher=txtPublisher.getText();
+        String bookEdition=txtBookEdition.getText();
+        String bookQTY = txtBookQTY.getText();
+        String bookGenreType=txtBookGenreType.getText();
+        String bookPrice =txtBookPrice.getText();
+
+
+
+        BookDTO bookDTO = new BookDTO(dateOfBookEntity,bookID,bookName,bookAuthor,publisher,bookEdition,bookQTY,bookGenreType,bookPrice);
+        boolean success =bookBO.createBook(bookDTO);
+        if (success) {
+            new Alert(Alert.AlertType.INFORMATION, "Book registered successfully!").show();
+
+        } else {
+            new Alert(Alert.AlertType.ERROR, "Error occurred while registering Book!").show();
+        }
 
     }
 
