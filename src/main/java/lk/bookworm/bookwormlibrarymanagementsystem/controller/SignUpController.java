@@ -64,7 +64,7 @@ public class SignUpController {
             return;
         }
 
-
+        AdminDTO adminDTO = new AdminDTO(email,userName,password);
         Parent load=FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/view/login-page.fxml")));
         root.getChildren().clear();
         root.getChildren().add(load);
