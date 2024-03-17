@@ -2,7 +2,6 @@ package lk.bookworm.bookwormlibrarymanagementsystem.dao;
 
 import lk.bookworm.bookwormlibrarymanagementsystem.config.FactoryConfiguration;
 import lk.bookworm.bookwormlibrarymanagementsystem.dto.BookDTO;
-import lk.bookworm.bookwormlibrarymanagementsystem.entity.AdminEntity;
 import lk.bookworm.bookwormlibrarymanagementsystem.entity.BookEntity;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -14,14 +13,15 @@ public class BookDAO {
 
         try {
             transaction = session.beginTransaction();
+
             BookEntity newBook = new BookEntity();
 
             newBook.setDateOfBookEntry(bookDTO.getDateOfBookEntity());
             newBook.setBookID(bookDTO.getBookID());
             newBook.setBookName(bookDTO.getBookName());
             newBook.setBookAuthor(bookDTO.getBookAuthor());
-            newBook.setBookEdition(bookDTO.getBookEdition());
             newBook.setPublisher(bookDTO.getPublisher());
+            newBook.setBookEdition(bookDTO.getBookEdition());
             newBook.setBookQTY(bookDTO.getBookQTY());
             newBook.setBookGenreType(bookDTO.getBookGenreType());
             newBook.setBookPrice(bookDTO.getBookPrice());

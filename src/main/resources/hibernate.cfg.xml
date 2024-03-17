@@ -16,6 +16,7 @@
 
   <!-- Specify entity package to scan -->
   <mapping class="lk.bookworm.bookwormlibrarymanagementsystem.entity.AdminEntity" />
+  <mapping class="lk.bookworm.bookwormlibrarymanagementsystem.entity.BookEntity" />
 
   <!-- Other properties -->
   <!-- ... -->

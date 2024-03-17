@@ -87,6 +87,10 @@ public class BookManagementController {
 
     private BookBO bookBO;
 
+    public BookManagementController(){
+        bookBO=new BookBO();
+    }
+
     @FXML
     void btnDeleteOnAction(ActionEvent event) {
 
@@ -118,7 +122,7 @@ public class BookManagementController {
             new Alert(Alert.AlertType.INFORMATION, "Book registered successfully!").show();
 
         } else {
-            new Alert(Alert.AlertType.ERROR, "Error occurred while registering Book!").show();
+            new Alert(Alert.AlertType.ERROR, "Book registering fail!").show();
         }
 
     }

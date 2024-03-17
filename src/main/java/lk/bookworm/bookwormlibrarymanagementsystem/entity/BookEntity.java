@@ -15,7 +15,6 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
 @Table(name="books_details")
 public class BookEntity {
 
